@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "MediExplain AI Parameter Education",
+  "scope": "Educational explanations for selected human blood tests.",
+  "classification_policy": "Educational content only. This file must never control or alter result classification, reference ranges, range types, or unit compatibility.",
+  "parameters": [
+    {
+      "parameter_id": "hemoglobin",
+      "parameter_name": "Haemoglobin",
+      "what_it_measures": {
+        "English": "Measures the amount of haemoglobin in the blood. Haemoglobin is an iron-containing protein in red blood cells that carries oxygen from the lungs to the body.",
+        "Hinglish": "Yeh test khoon mein haemoglobin ki matra naapta hai. Haemoglobin red blood cells mein maujood iron wala protein hai, jo lungs se oxygen body tak le jaata hai."
+      },
+      "why_doctors_check_it": {
+        "English": "Doctors often check haemoglobin as part of a complete blood count or when reviewing concerns about red blood cells, such as possible anaemia. It is only one part of a person's health information.",
+        "Hinglish": "Doctors haemoglobin ko aksar complete blood count ke saath dekhte hain, ya red blood cells aur anaemia se judi concerns ko samajhne ke liye. Yeh kisi vyakti ki health information ka sirf ek hissa hai."
+      },
+      "common_associations": [
+          {
+            "direction": "low",
+            "English": "A lower result may be associated with anaemia, low iron, or blood loss.",
+            "Hinglish": "Kam result anaemia, iron ki kami, ya blood loss se juda ho sakta hai."
+          },
+          {
+            "direction": "high",
+            "English": "A higher result can sometimes occur with dehydration or living at a high altitude.",
+            "Hinglish": "Zyada result kabhi-kabhi dehydration ya zyada unchai par rehne ke saath ho sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "These are possible associations only; a haemoglobin result by itself cannot identify or confirm a cause.",
+            "Hinglish": "Yeh sirf mumkin sambandh hain; haemoglobin ka ek result akela wajah ko pehchaan ya confirm nahi kar sakta."
+          }
+        ],
+      "general_wellness": {
+        "English": "This result alone does not show whether a particular food change is needed. If you have questions about food or daily habits, ask your clinician what is relevant to your overall situation; this explanation is not a treatment plan.",
+        "Hinglish": "Sirf is result se yeh pata nahi chalta ki khaane mein koi khaas badlav zaroori hai ya nahi. Food ya roz ke habits ke baare mein sawaal ho to clinician se poochhein ki aapki overall situation mein kya relevant hai; yeh treatment plan nahi hai."
+      },
+      "doctor_questions": {
+        "English": [
+          "How should I understand this haemoglobin result alongside the other CBC values and the laboratory range?",
+          "Does this result need any follow-up in my situation?"
+        ],
+        "Hinglish": [
+          "Is haemoglobin result ko baaki CBC values aur lab range ke saath kaise samjhein?",
+          "Meri situation mein kya is result ka koi follow-up chahiye?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Hemoglobin Test (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/hemoglobin-test/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    },
+    {
+      "parameter_id": "wbc_count",
+      "parameter_name": "White blood cell count",
+      "what_it_measures": {
+        "English": "Counts the white blood cells in a blood sample. White blood cells are part of the immune system and help the body respond to infections and other conditions.",
+        "Hinglish": "Yeh test blood sample mein white blood cells ki ginti karta hai. White blood cells immune system ka hissa hain aur body ko infections aur doosri conditions ke khilaaf response dene mein madad karte hain."
+      },
+      "why_doctors_check_it": {
+        "English": "Doctors may check this count as part of a CBC or when reviewing possible infection, inflammation, immune-system concerns, or changes in blood-cell counts.",
+        "Hinglish": "Doctors is count ko CBC ke hissa ke roop mein ya possible infection, inflammation, immune-system concerns, ya blood-cell counts mein badlav ko samajhne ke liye check kar sakte hain."
+      },
+      "common_associations": [
+          {
+            "direction": "high",
+            "English": "A higher count can sometimes occur with an infection, inflammation, an allergy, or certain medicine effects.",
+            "Hinglish": "Zyada count kabhi-kabhi infection, inflammation, allergy, ya kuch medicines ke effect ke saath ho sakta hai."
+          },
+          {
+            "direction": "low",
+            "English": "A lower count may be associated with some immune-system or bone-marrow conditions, or certain medicine effects.",
+            "Hinglish": "Kam count kuch immune-system ya bone-marrow conditions, ya kuch medicines ke effect se juda ho sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "A WBC count alone cannot confirm a diagnosis or identify the cause.",
+            "Hinglish": "WBC count akela diagnosis confirm nahi kar sakta aur na hi wajah bata sakta hai."
+          }
+        ],
+      "general_wellness": {
+        "English": "A WBC count alone does not point to a specific food or lifestyle change. Discuss any concerns about your health or daily habits with your clinician; this information does not recommend treatment.",
+        "Hinglish": "Sirf WBC count se kisi khaas food ya lifestyle change ka pata nahi chalta. Health ya roz ke habits ko lekar concern ho to clinician se baat karein; yeh jaankari treatment recommend nahi karti."
+      },
+      "doctor_questions": {
+        "English": [
+          "How does this WBC result fit with my other blood-count results?",
+          "Could recent health changes or medicines be relevant, and is any follow-up needed?"
+        ],
+        "Hinglish": [
+          "Yeh WBC result mere baaki blood-count results ke saath kaise fit hota hai?",
+          "Kya haal ke health changes ya medicines relevant ho sakte hain, aur kya follow-up chahiye?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "White Blood Count (WBC) (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/white-blood-count-wbc/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    },
+    {
+      "parameter_id": "platelet_count",
+      "parameter_name": "Platelet count",
+      "what_it_measures": {
+        "English": "Counts platelets, which are small blood components that help form clots and slow or stop bleeding.",
+        "Hinglish": "Yeh test platelets ki ginti karta hai. Platelets khoon ke chhote components hain jo clot banane aur bleeding ko kam ya rokne mein madad karte hain."
+      },
+      "why_doctors_check_it": {
+        "English": "A platelet count is commonly included in a CBC. Doctors may review it when considering bleeding or clotting concerns or monitoring blood-cell counts.",
+        "Hinglish": "Platelet count aam taur par CBC mein shamil hota hai. Doctors ise bleeding ya clotting concerns ko samajhne ya blood-cell counts ko monitor karne ke liye dekh sakte hain."
+      },
+      "common_associations": [
+          {
+            "direction": "low",
+            "English": "A low count can be associated with a greater tendency to bleed.",
+            "Hinglish": "Kam count zyada bleeding ke risk se juda ho sakta hai."
+          },
+          {
+            "direction": "high",
+            "English": "A high count can sometimes be associated with increased clotting.",
+            "Hinglish": "Zyada count kabhi-kabhi clotting badhne se juda ho sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "The count alone does not identify why it is high or low or confirm a condition.",
+            "Hinglish": "Count akela yeh nahi batata ki woh kam ya zyada kyun hai, aur kisi condition ko confirm nahi karta."
+          }
+        ],
+      "general_wellness": {
+        "English": "This count alone does not identify a specific food or lifestyle change. If you have concerns about bleeding, clotting, or daily habits, discuss them with your clinician; this explanation is not treatment advice.",
+        "Hinglish": "Sirf is count se kisi khaas food ya lifestyle change ka pata nahi chalta. Bleeding, clotting, ya roz ke habits ko lekar concern ho to clinician se baat karein; yeh explanation treatment advice nahi hai."
+      },
+      "doctor_questions": {
+        "English": [
+          "How should I understand this platelet count with the rest of my CBC?",
+          "Does this result need follow-up based on my overall health information?"
+        ],
+        "Hinglish": [
+          "Is platelet count ko CBC ke baaki results ke saath kaise samjhein?",
+          "Meri overall health information ke hisaab se kya is result ka follow-up chahiye?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Platelet Tests (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/platelet-tests/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    },
+    {
+      "parameter_id": "rbc_count",
+      "parameter_name": "Red blood cell count",
+      "what_it_measures": {
+        "English": "Counts red blood cells, also called erythrocytes. These cells contain haemoglobin, which carries oxygen from the lungs to the body's cells.",
+        "Hinglish": "Yeh test red blood cells, yaani erythrocytes, ki ginti karta hai. In cells mein haemoglobin hota hai, jo lungs se oxygen body ke cells tak le jaata hai."
+      },
+      "why_doctors_check_it": {
+        "English": "Doctors commonly review an RBC count as part of a CBC and consider it with haemoglobin and other blood-count results.",
+        "Hinglish": "Doctors aam taur par RBC count ko CBC ke hissa ke roop mein dekhte hain aur ise haemoglobin aur blood-count ke doosre results ke saath samajhte hain."
+      },
+      "common_associations": [
+          {
+            "direction": "low",
+            "English": "A lower count may be associated with anaemia or blood loss.",
+            "Hinglish": "Kam count anaemia ya blood loss se juda ho sakta hai."
+          },
+          {
+            "direction": "high",
+            "English": "A higher count can sometimes occur with dehydration or living at a high altitude.",
+            "Hinglish": "Zyada count kabhi-kabhi dehydration ya zyada unchai par rehne ke saath ho sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "These are possible associations, not a diagnosis; an RBC count alone cannot identify the cause.",
+            "Hinglish": "Yeh mumkin sambandh hain, diagnosis nahi; RBC count akela wajah nahi bata sakta."
+          }
+        ],
+      "general_wellness": {
+        "English": "An RBC count alone does not show whether a particular food change is needed. Ask your clinician how this count fits with the rest of your report before making result-specific changes.",
+        "Hinglish": "Sirf RBC count se yeh nahi pata chalta ki khaane mein koi khaas badlav chahiye ya nahi. Result ke basis par koi badlav karne se pehle clinician se poochhein ki yeh count report ke baaki hisson ke saath kaise fit hota hai."
+      },
+      "doctor_questions": {
+        "English": [
+          "How should this RBC count be understood with my haemoglobin and other CBC values?",
+          "Is any follow-up needed to understand this result?"
+        ],
+        "Hinglish": [
+          "Is RBC count ko haemoglobin aur CBC ki doosri values ke saath kaise samjhein?",
+          "Is result ko samajhne ke liye kya follow-up chahiye?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Red Blood Cell (RBC) Count (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/red-blood-cell-rbc-count/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    },
+    {
+      "parameter_id": "fasting_glucose",
+      "parameter_name": "Fasting plasma glucose",
+      "what_it_measures": {
+        "English": "Measures glucose, a type of sugar in the blood, in a sample collected for a fasting glucose test. Glucose is one of the body's sources of energy.",
+        "Hinglish": "Yeh fasting glucose test ke liye liye gaye blood sample mein glucose, yaani ek tarah ki sugar, naapta hai. Glucose body ke energy sources mein se ek hai."
+      },
+      "why_doctors_check_it": {
+        "English": "Doctors may use a blood glucose test to screen for or monitor changes in blood sugar, or to help assess symptoms. The test type and the person's overall context matter when interpreting a result.",
+        "Hinglish": "Doctors blood glucose test ka use blood sugar mein badlav ko screen ya monitor karne, ya symptoms ko samajhne mein madad ke liye kar sakte hain. Result samajhne mein test ka type aur vyakti ki overall situation maayne rakhti hai."
+      },
+      "common_associations": [
+          {
+            "direction": "high",
+            "English": "Higher blood glucose can sometimes be associated with prediabetes or diabetes, but other health conditions or medicine effects may also affect glucose.",
+            "Hinglish": "Zyada blood glucose kabhi-kabhi prediabetes ya diabetes se juda ho sakta hai, lekin doosri health conditions ya medicines ka effect bhi glucose ko badal sakta hai."
+          },
+          {
+            "direction": "low",
+            "English": "Lower blood glucose can sometimes be associated with certain health conditions or medicine effects.",
+            "Hinglish": "Kam blood glucose kabhi-kabhi kuch health conditions ya medicines ke effect se juda ho sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "A single result cannot by itself confirm or rule out a disease.",
+            "Hinglish": "Ek result akela kisi disease ko confirm ya rule out nahi kar sakta."
+          }
+        ],
+      "general_wellness": {
+        "English": "This result alone does not provide a personal food or activity plan. If you want to discuss eating patterns or physical activity, ask your clinician what is appropriate for your circumstances; this content does not promise to change a test result.",
+        "Hinglish": "Sirf is result se personal food ya activity plan nahi milta. Eating habits ya physical activity par baat karni ho to clinician se poochhein ki aapki situation ke liye kya theek hai; yeh content test result badalne ka vaada nahi karta."
+      },
+      "doctor_questions": {
+        "English": [
+          "Was this sample collected after the fasting period requested by the laboratory or clinician?",
+          "Which test type and laboratory information should be used to interpret this result, and is any follow-up needed?"
+        ],
+        "Hinglish": [
+          "Kya yeh sample lab ya clinician ke bataye fasting period ke baad liya gaya tha?",
+          "Is result ko samajhne ke liye kaunsa test type aur lab information dekhni chahiye, aur kya follow-up chahiye?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Blood Glucose Test (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    },
+    {
+      "parameter_id": "hba1c",
+      "parameter_name": "Haemoglobin A1c",
+      "what_it_measures": {
+        "English": "Measures the percentage of haemoglobin with glucose attached. It gives an estimate of average blood glucose over roughly the previous two to three months.",
+        "Hinglish": "Yeh test haemoglobin ke us percentage ko naapta hai jiske saath glucose juda hota hai. Isse pichhle lagbhag do se teen mahino ke average blood glucose ka andaaza milta hai."
+      },
+      "why_doctors_check_it": {
+        "English": "Doctors may use HbA1c to screen for or monitor blood-glucose patterns over time. It is interpreted with the person's overall health information and is not the same as a single-time glucose measurement.",
+        "Hinglish": "Doctors HbA1c ka use samay ke saath blood-glucose pattern ko screen ya monitor karne ke liye kar sakte hain. Ise vyakti ki overall health information ke saath samjha jaata hai; yeh ek samay par glucose naapne wale test jaisa nahi hai."
+      },
+      "common_associations": [
+          {
+            "direction": "high",
+            "English": "A higher HbA1c can be associated with a higher average blood glucose over time and may be considered during diabetes or prediabetes screening or monitoring.",
+            "Hinglish": "Zyada HbA1c samay ke saath zyada average blood glucose se juda ho sakta hai, aur diabetes ya prediabetes ki screening ya monitoring mein dekha ja sakta hai."
+          },
+          {
+            "direction": "general",
+            "English": "HbA1c alone does not confirm or rule out a disease for every person; a clinician interprets it with other information.",
+            "Hinglish": "HbA1c akela har vyakti mein disease confirm ya rule out nahi karta; clinician ise doosri information ke saath samajhte hain."
+          }
+        ],
+      "general_wellness": {
+        "English": "This result alone is not a personal diet or activity plan. If you want to discuss eating patterns or physical activity, ask your clinician what is appropriate for your circumstances; general lifestyle information is not a treatment promise.",
+        "Hinglish": "Sirf is result se personal diet ya activity plan nahi milta. Eating habits ya physical activity par baat karni ho to clinician se poochhein ki aapki situation ke liye kya theek hai; general lifestyle information treatment ka vaada nahi hai."
+      },
+      "doctor_questions": {
+        "English": [
+          "How should I understand this HbA1c result alongside other glucose tests and my overall health information?",
+          "Does this result need confirmation or follow-up testing in my situation?"
+        ],
+        "Hinglish": [
+          "Is HbA1c result ko doosre glucose tests aur meri overall health information ke saath kaise samjhein?",
+          "Meri situation mein kya is result ko confirm karne ya follow-up test ki zaroorat hai?"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Hemoglobin A1C (HbA1c) Test (MedlinePlus)",
+          "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/",
+          "claims_supported": [
+            "what_it_measures",
+            "why_doctors_check_it",
+            "common_associations",
+            "interpretation_context"
+          ]
+        }
+      ],
+      "content_review_status": "needs_review"
+    }
+  ]
+}

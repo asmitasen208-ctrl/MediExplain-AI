@@ -1,0 +1,1211 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "MediExplain AI Human Blood Test Parameters",
+  "scope": "Educational catalog of common human blood laboratory parameters.",
+  "safety_and_range_policy": {
+    "priority": "A reference interval printed on the patient's own laboratory report always takes precedence over this catalog.",
+    "generic_ranges_are_universal": false,
+    "generic_range_use": "Generic ranges are illustrative adult references only. They are not diagnostic cutoffs, and a result must not be classified from this catalog when the patient's laboratory range is available. Review and validate these examples against the intended laboratory and population before using them in software.",
+    "qualification": "Intervals can vary with laboratory method, specimen, age, sex, pregnancy, population, and clinical context. Use the reporting laboratory's age- and context-specific interval.",
+    "clinical_decision_thresholds": "Some glucose, lipid, and nutrient entries are clinical decision thresholds or commonly used targets rather than population reference intervals. Their range_type field identifies this distinction.",
+    "missing_or_assay_specific_ranges": "A null range means no single broadly applicable interval is supplied here; use the laboratory's own interval.",
+    "medical_advice": "This dataset provides no diagnosis or treatment recommendation."
+  },
+  "categories": [
+    {
+      "id": "cbc",
+      "name": "CBC / Complete Blood Count",
+      "description": "Red cells, white cells, platelets, and common differential indices."
+    },
+    {
+      "id": "lft",
+      "name": "Liver Function Test (LFT)",
+      "description": "Common enzymes, bilirubin, and proteins measured in liver panels."
+    },
+    {
+      "id": "kft",
+      "name": "Kidney Function Test (KFT)",
+      "description": "Common blood markers of filtration, electrolytes, and mineral balance."
+    },
+    {
+      "id": "lipid",
+      "name": "Lipid Profile",
+      "description": "Cholesterol, triglycerides, and selected apolipoproteins."
+    },
+    {
+      "id": "thyroid",
+      "name": "Thyroid Profile",
+      "description": "Thyroid hormones and selected thyroid-related antibodies."
+    },
+    {
+      "id": "diabetes",
+      "name": "Diabetes Profile",
+      "description": "Blood glucose, longer-term glycaemic markers, and selected insulin-related tests."
+    },
+    {
+      "id": "iron",
+      "name": "Iron Profile",
+      "description": "Circulating iron, iron-binding capacity, transport, and storage markers."
+    },
+    {
+      "id": "vitamin",
+      "name": "Vitamin Profile",
+      "description": "Common blood tests measuring vitamin concentrations or status markers."
+    }
+  ],
+  "parameters": [
+    {
+      "id": "rbc_count",
+      "parameter_name": "Red blood cell count",
+      "full_name": "Red blood cell (erythrocyte) count",
+      "aliases": ["RBC", "Red cells", "Erythrocyte count"],
+      "unit": "10^6/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "4.5-5.9", "range_type": "reference_interval", "qualifications": "Age, altitude, pregnancy status, and laboratory method affect the interval."},
+        {"population": "Adult females", "range": "4.1-5.1", "range_type": "reference_interval", "qualifications": "Pregnancy and menstrual status may affect the interval."}
+      ],
+      "description": "Counts red blood cells, which carry oxygen using haemoglobin."
+    },
+    {
+      "id": "hemoglobin",
+      "parameter_name": "Haemoglobin",
+      "full_name": "Haemoglobin concentration",
+      "aliases": ["Hemoglobin", "Hb", "Hgb"],
+      "unit": "g/dL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "13.5-17.5", "range_type": "reference_interval", "qualifications": "Age, altitude, pregnancy status, and laboratory method affect the interval."},
+        {"population": "Adult females", "range": "12.0-15.5", "range_type": "reference_interval", "qualifications": "Pregnancy and menstrual status may affect the interval."}
+      ],
+      "description": "Measures the oxygen-carrying protein in red blood cells."
+    },
+    {
+      "id": "hematocrit",
+      "parameter_name": "Hematocrit",
+      "full_name": "Packed cell volume; proportion of blood volume occupied by red blood cells",
+      "aliases": ["Haematocrit", "HCT", "PCV", "Packed cell volume"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "41-53", "range_type": "reference_interval", "qualifications": "Age, altitude, pregnancy status, and laboratory method affect the interval."},
+        {"population": "Adult females", "range": "36-46", "range_type": "reference_interval", "qualifications": "Pregnancy and menstrual status may affect the interval."}
+      ],
+      "description": "Measures the fraction of whole-blood volume made up of red blood cells."
+    },
+    {
+      "id": "wbc_count",
+      "parameter_name": "White blood cell count",
+      "full_name": "Total leukocyte count",
+      "aliases": ["WBC", "White cell count", "Leukocyte count", "Leucocyte count", "TLC"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "4.5-11.0", "range_type": "reference_interval", "qualifications": "Children have age-dependent intervals; pregnancy and laboratory method can also affect the range."}
+      ],
+      "description": "Counts circulating white blood cells, which include several immune-cell types."
+    },
+    {
+      "id": "platelet_count",
+      "parameter_name": "Platelet count",
+      "full_name": "Thrombocyte count",
+      "aliases": ["Platelets", "PLT", "Thrombocytes"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "150-450", "range_type": "reference_interval", "qualifications": "Use the laboratory interval; age and method can affect limits."}
+      ],
+      "description": "Counts platelets, blood components involved in clot formation."
+    },
+    {
+      "id": "mcv",
+      "parameter_name": "Mean corpuscular volume",
+      "full_name": "Mean corpuscular volume",
+      "aliases": ["MCV"],
+      "unit": "fL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "80-100", "range_type": "reference_interval", "qualifications": "Age-dependent ranges apply to children."}
+      ],
+      "description": "Reports the average volume, or size, of red blood cells."
+    },
+    {
+      "id": "mch",
+      "parameter_name": "Mean corpuscular haemoglobin",
+      "full_name": "Mean corpuscular haemoglobin per red blood cell",
+      "aliases": ["MCH", "Mean corpuscular hemoglobin"],
+      "unit": "pg",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "27-33", "range_type": "reference_interval", "qualifications": "Ranges depend on analyser and laboratory."}
+      ],
+      "description": "Estimates the average mass of haemoglobin in an individual red blood cell."
+    },
+    {
+      "id": "mchc",
+      "parameter_name": "Mean corpuscular haemoglobin concentration",
+      "full_name": "Mean corpuscular haemoglobin concentration",
+      "aliases": ["MCHC", "Mean corpuscular hemoglobin concentration"],
+      "unit": "g/dL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "32-36", "range_type": "reference_interval", "qualifications": "Ranges depend on analyser and laboratory."}
+      ],
+      "description": "Estimates the average haemoglobin concentration within red blood cells."
+    },
+    {
+      "id": "rdw_cv",
+      "parameter_name": "Red cell distribution width",
+      "full_name": "Red cell distribution width, coefficient of variation",
+      "aliases": ["RDW", "RDW-CV"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "11.5-14.5", "range_type": "reference_interval", "qualifications": "Assay-specific; the reporting laboratory's interval is preferred."}
+      ],
+      "description": "Measures variation in red blood cell size."
+    },
+    {
+      "id": "rdw_sd",
+      "parameter_name": "Red cell distribution width, standard deviation",
+      "full_name": "Red cell distribution width measured as standard deviation",
+      "aliases": ["RDW-SD"],
+      "unit": "fL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "39-46", "range_type": "reference_interval", "qualifications": "Assay-specific; the reporting laboratory's interval is preferred."}
+      ],
+      "description": "Measures the absolute spread of red blood cell volumes."
+    },
+    {
+      "id": "neutrophils_percent",
+      "parameter_name": "Neutrophils",
+      "full_name": "Neutrophils as a percentage of white blood cells",
+      "aliases": ["Neu", "Neutrophil percentage", "Neutrophils %", "NEUT%"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "40-70", "range_type": "reference_interval", "qualifications": "Differential percentages vary by laboratory and age; distinguish percentage from absolute count."}
+      ],
+      "description": "Reports the proportion of white blood cells that are neutrophils."
+    },
+    {
+      "id": "neutrophils_absolute",
+      "parameter_name": "Absolute neutrophil count",
+      "full_name": "Absolute count of circulating neutrophils",
+      "aliases": ["ANC", "Absolute neutrophils", "Neutrophil count", "Neu abs"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "1.5-8.0", "range_type": "reference_interval", "qualifications": "Age-dependent ranges apply to children; the laboratory may use different limits."}
+      ],
+      "description": "Counts neutrophils directly rather than expressing them as a percentage."
+    },
+    {
+      "id": "lymphocytes_percent",
+      "parameter_name": "Lymphocytes",
+      "full_name": "Lymphocytes as a percentage of white blood cells",
+      "aliases": ["Lymphocyte percentage", "Lymphocytes %", "LYM%"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "20-40", "range_type": "reference_interval", "qualifications": "Differential percentages vary by laboratory and age; distinguish percentage from absolute count."}
+      ],
+      "description": "Reports the proportion of white blood cells that are lymphocytes."
+    },
+    {
+      "id": "lymphocytes_absolute",
+      "parameter_name": "Absolute lymphocyte count",
+      "full_name": "Absolute count of circulating lymphocytes",
+      "aliases": ["ALC", "Absolute lymphocytes", "Lymphocyte count"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "1.0-4.0", "range_type": "reference_interval", "qualifications": "Age-dependent ranges apply to children; the laboratory may use different limits."}
+      ],
+      "description": "Counts lymphocytes directly rather than expressing them as a percentage."
+    },
+    {
+      "id": "monocytes_percent",
+      "parameter_name": "Monocytes",
+      "full_name": "Monocytes as a percentage of white blood cells",
+      "aliases": ["Monocyte percentage", "Monocytes %", "MONO%"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "2-8", "range_type": "reference_interval", "qualifications": "Differential percentages vary by laboratory and age; distinguish percentage from absolute count."}
+      ],
+      "description": "Reports the proportion of white blood cells that are monocytes."
+    },
+    {
+      "id": "monocytes_absolute",
+      "parameter_name": "Absolute monocyte count",
+      "full_name": "Absolute count of circulating monocytes",
+      "aliases": ["Absolute monocytes", "Monocyte count"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.2-0.8", "range_type": "reference_interval", "qualifications": "Age-dependent and analyser-specific."}
+      ],
+      "description": "Counts monocytes directly rather than expressing them as a percentage."
+    },
+    {
+      "id": "eosinophils_percent",
+      "parameter_name": "Eosinophils",
+      "full_name": "Eosinophils as a percentage of white blood cells",
+      "aliases": ["Eosinophil percentage", "Eosinophils %", "EOS%"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "1-4", "range_type": "reference_interval", "qualifications": "Differential percentages vary by laboratory and age; distinguish percentage from absolute count."}
+      ],
+      "description": "Reports the proportion of white blood cells that are eosinophils."
+    },
+    {
+      "id": "eosinophils_absolute",
+      "parameter_name": "Absolute eosinophil count",
+      "full_name": "Absolute count of circulating eosinophils",
+      "aliases": ["Absolute eosinophils", "Eosinophil count"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.0-0.5", "range_type": "reference_interval", "qualifications": "Age-dependent and analyser-specific."}
+      ],
+      "description": "Counts eosinophils directly rather than expressing them as a percentage."
+    },
+    {
+      "id": "basophils_percent",
+      "parameter_name": "Basophils",
+      "full_name": "Basophils as a percentage of white blood cells",
+      "aliases": ["Basophil percentage", "Basophils %", "BASO%"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0-1", "range_type": "reference_interval", "qualifications": "Differential percentages vary by laboratory and age; distinguish percentage from absolute count."}
+      ],
+      "description": "Reports the proportion of white blood cells that are basophils."
+    },
+    {
+      "id": "basophils_absolute",
+      "parameter_name": "Absolute basophil count",
+      "full_name": "Absolute count of circulating basophils",
+      "aliases": ["Absolute basophils", "Basophil count"],
+      "unit": "10^3/uL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.0-0.2", "range_type": "reference_interval", "qualifications": "Age-dependent and analyser-specific."}
+      ],
+      "description": "Counts basophils directly rather than expressing them as a percentage."
+    },
+    {
+      "id": "immature_granulocytes_percent",
+      "parameter_name": "Immature granulocytes",
+      "full_name": "Immature granulocytes as a percentage of white blood cells",
+      "aliases": ["IG%", "Immature granulocyte percentage"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0-0.5", "range_type": "assay_specific", "qualifications": "Analyser-specific; paediatric ranges and reporting conventions differ."}
+      ],
+      "description": "Reports the percentage of immature granulocyte forms measured in peripheral blood."
+    },
+    {
+      "id": "reticulocytes_percent",
+      "parameter_name": "Reticulocytes",
+      "full_name": "Reticulocyte percentage",
+      "aliases": ["Retic %", "Reticulocyte count percentage"],
+      "unit": "%",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.5-2.5", "range_type": "reference_interval", "qualifications": "Newborn and paediatric intervals differ; method affects the interval."}
+      ],
+      "description": "Measures the percentage of young, newly released red blood cells."
+    },
+    {
+      "id": "reticulocytes_absolute",
+      "parameter_name": "Absolute reticulocyte count",
+      "full_name": "Absolute number of circulating reticulocytes",
+      "aliases": ["ARC", "Absolute retics"],
+      "unit": "10^9/L",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "25-100", "range_type": "reference_interval", "qualifications": "Age- and method-specific laboratory intervals apply."}
+      ],
+      "description": "Counts circulating reticulocytes as an absolute concentration."
+    },
+    {
+      "id": "mpv",
+      "parameter_name": "Mean platelet volume",
+      "full_name": "Mean platelet volume",
+      "aliases": ["MPV"],
+      "unit": "fL",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "7.5-12.0", "range_type": "reference_interval", "qualifications": "Highly analyser-dependent; use the reporting laboratory's interval."}
+      ],
+      "description": "Estimates the average size of circulating platelets."
+    },
+    {
+      "id": "nucleated_rbc",
+      "parameter_name": "Nucleated red blood cells",
+      "full_name": "Nucleated red blood cells in peripheral blood",
+      "aliases": ["NRBC", "nRBC", "Nucleated RBC"],
+      "unit": "per 100 WBC",
+      "category_id": "cbc",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0", "range_type": "reference_interval", "qualifications": "Neonatal values differ; laboratories may report an absolute count instead."}
+      ],
+      "description": "Reports immature red blood cells that still contain a nucleus."
+    },
+    {
+      "id": "alt",
+      "parameter_name": "Alanine aminotransferase",
+      "full_name": "Alanine aminotransferase",
+      "aliases": ["ALT", "SGPT", "GPT", "ALT/SGPT"],
+      "unit": "U/L",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "7-55", "range_type": "reference_interval", "qualifications": "Upper limits vary by sex, laboratory method, and guideline; use the local interval."}
+      ],
+      "description": "An enzyme measured in blood that is commonly included in liver panels."
+    },
+    {
+      "id": "ast",
+      "parameter_name": "Aspartate aminotransferase",
+      "full_name": "Aspartate aminotransferase",
+      "aliases": ["AST", "SGOT", "GOT", "AST/SGOT"],
+      "unit": "U/L",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "8-48", "range_type": "reference_interval", "qualifications": "Age, sex, muscle activity, assay, and laboratory method affect the interval."}
+      ],
+      "description": "An enzyme present in liver and other tissues and commonly measured in liver panels."
+    },
+    {
+      "id": "alkaline_phosphatase",
+      "parameter_name": "Alkaline phosphatase",
+      "full_name": "Alkaline phosphatase",
+      "aliases": ["ALP", "ALKP", "Alk phos"],
+      "unit": "U/L",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "40-130", "range_type": "reference_interval", "qualifications": "Children, adolescents, and pregnancy require distinct intervals; method-specific limits apply."}
+      ],
+      "description": "An enzyme measured in blood; liver panels commonly include it."
+    },
+    {
+      "id": "ggt",
+      "parameter_name": "Gamma-glutamyl transferase",
+      "full_name": "Gamma-glutamyl transferase",
+      "aliases": ["GGT", "Gamma GT", "Gamma-GT"],
+      "unit": "U/L",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "8-61", "range_type": "reference_interval", "qualifications": "Sex-specific limits and methods differ across laboratories."},
+        {"population": "Adult females", "range": "5-36", "range_type": "reference_interval", "qualifications": "Sex-specific limits and methods differ across laboratories."}
+      ],
+      "description": "An enzyme measured in blood and often included in liver panels."
+    },
+    {
+      "id": "bilirubin_total",
+      "parameter_name": "Total bilirubin",
+      "full_name": "Total bilirubin concentration",
+      "aliases": ["TBIL", "Bilirubin total", "Total bili"],
+      "unit": "mg/dL",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.1-1.2", "range_type": "reference_interval", "qualifications": "Newborns have rapidly changing, age-in-hours-specific intervals."}
+      ],
+      "description": "Measures total bilirubin, a pigment formed during red blood cell breakdown and processed by the liver."
+    },
+    {
+      "id": "bilirubin_direct",
+      "parameter_name": "Direct bilirubin",
+      "full_name": "Conjugated bilirubin",
+      "aliases": ["DBIL", "Direct bili", "Conjugated bilirubin"],
+      "unit": "mg/dL",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.0-0.3", "range_type": "reference_interval", "qualifications": "Assay-specific; newborn ranges differ."}
+      ],
+      "description": "Measures the conjugated fraction of bilirubin in blood."
+    },
+    {
+      "id": "albumin",
+      "parameter_name": "Albumin",
+      "full_name": "Serum albumin",
+      "aliases": ["ALB", "Serum albumin"],
+      "unit": "g/dL",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "3.5-5.0", "range_type": "reference_interval", "qualifications": "Age, pregnancy, hydration, and method may affect the interval."}
+      ],
+      "description": "Measures the main protein in blood, produced predominantly by the liver."
+    },
+    {
+      "id": "total_protein",
+      "parameter_name": "Total protein",
+      "full_name": "Total serum protein",
+      "aliases": ["TP", "Serum total protein"],
+      "unit": "g/dL",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "6.0-8.3", "range_type": "reference_interval", "qualifications": "Age, hydration, method, and laboratory affect the interval."}
+      ],
+      "description": "Measures the combined concentration of albumin and globulins in serum."
+    },
+    {
+      "id": "globulin",
+      "parameter_name": "Globulin",
+      "full_name": "Calculated serum globulin",
+      "aliases": ["Calculated globulin", "Serum globulin"],
+      "unit": "g/dL",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "2.0-3.5", "range_type": "reference_interval", "qualifications": "Often calculated from total protein minus albumin; laboratory-specific."}
+      ],
+      "description": "Represents the group of globulin proteins, often calculated from total protein and albumin."
+    },
+    {
+      "id": "ag_ratio",
+      "parameter_name": "Albumin/globulin ratio",
+      "full_name": "Serum albumin-to-globulin ratio",
+      "aliases": ["A/G ratio", "AGR", "Albumin globulin ratio"],
+      "unit": "ratio",
+      "category_id": "lft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "1.0-2.5", "range_type": "reference_interval", "qualifications": "Calculated value; laboratory-specific."}
+      ],
+      "description": "Compares albumin concentration with globulin concentration."
+    },
+    {
+      "id": "creatinine",
+      "parameter_name": "Creatinine",
+      "full_name": "Serum creatinine",
+      "aliases": ["SCr", "Serum creatinine", "Creat"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "0.74-1.35", "range_type": "reference_interval", "qualifications": "Muscle mass, age, pregnancy, and assay affect the result and interval."},
+        {"population": "Adult females", "range": "0.59-1.04", "range_type": "reference_interval", "qualifications": "Muscle mass, age, pregnancy, and assay affect the result and interval."}
+      ],
+      "description": "Measures a muscle-metabolism waste product filtered from blood by the kidneys."
+    },
+    {
+      "id": "bun",
+      "parameter_name": "Blood urea nitrogen",
+      "full_name": "Blood urea nitrogen",
+      "aliases": ["BUN", "Urea nitrogen", "Serum urea nitrogen"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "7-20", "range_type": "reference_interval", "qualifications": "Age, hydration, diet, pregnancy, and laboratory method affect the interval."}
+      ],
+      "description": "Measures nitrogen in urea, a protein-metabolism waste product carried in blood."
+    },
+    {
+      "id": "egfr",
+      "parameter_name": "Estimated glomerular filtration rate",
+      "full_name": "Estimated glomerular filtration rate",
+      "aliases": ["eGFR", "GFR estimate"],
+      "unit": "mL/min/1.73 m^2",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": ">=90", "range_type": "general_reference_threshold", "qualifications": "Estimate depends on age and equation; interpretation requires clinical context and persistence. Not a standalone diagnosis."}
+      ],
+      "description": "An estimate of the rate at which the kidneys filter blood, usually calculated from creatinine and other factors."
+    },
+    {
+      "id": "uric_acid",
+      "parameter_name": "Uric acid",
+      "full_name": "Serum urate concentration",
+      "aliases": ["Urate", "Serum uric acid", "UA"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "3.4-7.0", "range_type": "reference_interval", "qualifications": "Sex, age, medicines, and laboratory method affect the interval."},
+        {"population": "Adult females", "range": "2.4-6.0", "range_type": "reference_interval", "qualifications": "Sex, age, medicines, and laboratory method affect the interval."}
+      ],
+      "description": "Measures urate, a breakdown product of purines that is eliminated partly by the kidneys."
+    },
+    {
+      "id": "sodium",
+      "parameter_name": "Sodium",
+      "full_name": "Serum sodium",
+      "aliases": ["Na", "Na+", "Serum Na"],
+      "unit": "mmol/L",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "135-145", "range_type": "reference_interval", "qualifications": "Age and laboratory method may affect the interval."}
+      ],
+      "description": "Measures the major extracellular electrolyte in blood."
+    },
+    {
+      "id": "potassium",
+      "parameter_name": "Potassium",
+      "full_name": "Serum potassium",
+      "aliases": ["K", "K+", "Serum K"],
+      "unit": "mmol/L",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "3.5-5.0", "range_type": "reference_interval", "qualifications": "Specimen handling and laboratory method affect the interval."}
+      ],
+      "description": "Measures an electrolyte important in cellular and neuromuscular function."
+    },
+    {
+      "id": "chloride",
+      "parameter_name": "Chloride",
+      "full_name": "Serum chloride",
+      "aliases": ["Cl", "Cl-", "Serum Cl"],
+      "unit": "mmol/L",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "98-106", "range_type": "reference_interval", "qualifications": "Age and laboratory method may affect the interval."}
+      ],
+      "description": "Measures a major extracellular electrolyte that contributes to fluid and acid-base balance."
+    },
+    {
+      "id": "bicarbonate",
+      "parameter_name": "Bicarbonate",
+      "full_name": "Serum bicarbonate, commonly reported as total carbon dioxide",
+      "aliases": ["HCO3-", "CO2", "Total CO2", "Bicarbonate"],
+      "unit": "mmol/L",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "22-29", "range_type": "reference_interval", "qualifications": "Often reported as total CO2; laboratory method and age affect limits."}
+      ],
+      "description": "Measures a major blood buffer, often estimated from total carbon dioxide."
+    },
+    {
+      "id": "calcium_total",
+      "parameter_name": "Calcium",
+      "full_name": "Total serum calcium",
+      "aliases": ["Ca", "Total calcium", "Serum calcium"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "8.5-10.5", "range_type": "reference_interval", "qualifications": "Age, albumin, pregnancy, and laboratory method affect interpretation and limits."}
+      ],
+      "description": "Measures total calcium in blood, including protein-bound and free fractions."
+    },
+    {
+      "id": "phosphate",
+      "parameter_name": "Phosphate",
+      "full_name": "Inorganic serum phosphate",
+      "aliases": ["Phosphorus", "PO4", "Serum phosphate"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "2.5-4.5", "range_type": "reference_interval", "qualifications": "Children and adolescents have higher age-specific intervals."}
+      ],
+      "description": "Measures circulating inorganic phosphate, a mineral involved in bone and cellular energy processes."
+    },
+    {
+      "id": "magnesium",
+      "parameter_name": "Magnesium",
+      "full_name": "Serum magnesium",
+      "aliases": ["Mg", "Serum Mg"],
+      "unit": "mg/dL",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "1.7-2.2", "range_type": "reference_interval", "qualifications": "Method-specific laboratory intervals apply."}
+      ],
+      "description": "Measures circulating magnesium, an electrolyte and enzyme cofactor."
+    },
+    {
+      "id": "cystatin_c",
+      "parameter_name": "Cystatin C",
+      "full_name": "Serum cystatin C",
+      "aliases": ["Cys C", "Cystatin-C"],
+      "unit": "mg/L",
+      "category_id": "kft",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "0.6-1.0", "range_type": "reference_interval", "qualifications": "Assay, age, and population affect the interval; eGFR equations may use this marker."}
+      ],
+      "description": "Measures a protein used as a filtration marker and in some estimated GFR equations."
+    },
+    {
+      "id": "total_cholesterol",
+      "parameter_name": "Total cholesterol",
+      "full_name": "Total serum cholesterol",
+      "aliases": ["TC", "Cholesterol", "Cholesterol total"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "<200", "range_type": "clinical_decision_threshold", "qualifications": "Commonly described as desirable, not a universal reference interval; risk profile and current guidelines determine targets."}
+      ],
+      "description": "Measures the total amount of cholesterol carried in blood lipoproteins."
+    },
+    {
+      "id": "ldl_cholesterol",
+      "parameter_name": "LDL cholesterol",
+      "full_name": "Low-density lipoprotein cholesterol",
+      "aliases": ["LDL-C", "LDL", "Low-density lipoprotein"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "<100", "range_type": "clinical_decision_threshold", "qualifications": "Often labelled optimal for general reference; clinical targets are individualized by cardiovascular risk and guidelines."}
+      ],
+      "description": "Measures cholesterol carried mainly by low-density lipoprotein particles."
+    },
+    {
+      "id": "hdl_cholesterol",
+      "parameter_name": "HDL cholesterol",
+      "full_name": "High-density lipoprotein cholesterol",
+      "aliases": ["HDL-C", "HDL", "High-density lipoprotein"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": ">=40", "range_type": "clinical_decision_threshold", "qualifications": "Commonly used lower decision threshold; not a standalone health classification."},
+        {"population": "Adult females", "range": ">=50", "range_type": "clinical_decision_threshold", "qualifications": "Commonly used lower decision threshold; not a standalone health classification."}
+      ],
+      "description": "Measures cholesterol carried mainly by high-density lipoprotein particles."
+    },
+    {
+      "id": "triglycerides",
+      "parameter_name": "Triglycerides",
+      "full_name": "Serum triglycerides",
+      "aliases": ["TG", "Triglyceride", "TRIG"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults, fasting", "range": "<150", "range_type": "clinical_decision_threshold", "qualifications": "Fasting status affects results; non-fasting reporting and targets vary."}
+      ],
+      "description": "Measures triglyceride fats circulating in blood."
+    },
+    {
+      "id": "non_hdl_cholesterol",
+      "parameter_name": "Non-HDL cholesterol",
+      "full_name": "Non-high-density lipoprotein cholesterol",
+      "aliases": ["Non-HDL-C", "Non HDL cholesterol"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "<130", "range_type": "clinical_decision_threshold", "qualifications": "Common general target; individualized targets depend on cardiovascular risk and guideline."}
+      ],
+      "description": "Calculated as total cholesterol minus HDL cholesterol; summarizes cholesterol in atherogenic particles."
+    },
+    {
+      "id": "vldl_cholesterol",
+      "parameter_name": "VLDL cholesterol",
+      "full_name": "Very-low-density lipoprotein cholesterol",
+      "aliases": ["VLDL-C", "VLDL"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "5-40", "range_type": "reference_interval", "qualifications": "May be calculated rather than directly measured; method and fasting status matter."}
+      ],
+      "description": "Measures or estimates cholesterol carried by very-low-density lipoproteins."
+    },
+    {
+      "id": "apolipoprotein_b",
+      "parameter_name": "Apolipoprotein B",
+      "full_name": "Apolipoprotein B concentration",
+      "aliases": ["ApoB", "Apo B"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "risk_based_target", "qualifications": "Targets vary by cardiovascular risk and guideline; use the laboratory interval and clinician-defined target."}
+      ],
+      "description": "Measures apolipoprotein B, a structural protein present on several atherogenic lipoprotein particles."
+    },
+    {
+      "id": "apolipoprotein_a1",
+      "parameter_name": "Apolipoprotein A-I",
+      "full_name": "Apolipoprotein A-I concentration",
+      "aliases": ["ApoA-I", "Apo A1", "Apolipoprotein A1"],
+      "unit": "mg/dL",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "assay_specific", "qualifications": "Sex- and assay-specific intervals vary; use the laboratory's stated interval."}
+      ],
+      "description": "Measures the main structural protein of high-density lipoprotein particles."
+    },
+    {
+      "id": "lipoprotein_a",
+      "parameter_name": "Lipoprotein(a)",
+      "full_name": "Lipoprotein(a) particle concentration",
+      "aliases": ["Lp(a)", "LPA"],
+      "unit": "nmol/L",
+      "category_id": "lipid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "<75", "range_type": "clinical_decision_threshold", "qualifications": "Thresholds and units are assay-dependent; mg/dL and nmol/L are not directly interchangeable."}
+      ],
+      "description": "Measures a genetically influenced lipoprotein particle; laboratories may report particle concentration or mass."
+    },
+    {
+      "id": "tsh",
+      "parameter_name": "Thyroid-stimulating hormone",
+      "full_name": "Thyroid-stimulating hormone",
+      "aliases": ["TSH", "Thyrotropin"],
+      "unit": "mIU/L",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "0.4-4.0", "range_type": "reference_interval", "qualifications": "Age, assay, and pregnancy trimester affect the interval; use pregnancy- and laboratory-specific ranges when applicable."}
+      ],
+      "description": "Measures pituitary hormone that regulates thyroid hormone production."
+    },
+    {
+      "id": "free_t4",
+      "parameter_name": "Free thyroxine",
+      "full_name": "Unbound thyroxine concentration",
+      "aliases": ["Free T4", "FT4", "fT4"],
+      "unit": "ng/dL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "0.8-1.8", "range_type": "reference_interval", "qualifications": "Assay and pregnancy trimester affect the interval."}
+      ],
+      "description": "Measures the unbound fraction of circulating thyroxine."
+    },
+    {
+      "id": "free_t3",
+      "parameter_name": "Free triiodothyronine",
+      "full_name": "Unbound triiodothyronine concentration",
+      "aliases": ["Free T3", "FT3", "fT3"],
+      "unit": "pg/mL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "2.3-4.2", "range_type": "reference_interval", "qualifications": "Assay-specific and pregnancy-specific intervals may differ."}
+      ],
+      "description": "Measures the unbound fraction of circulating triiodothyronine."
+    },
+    {
+      "id": "total_t4",
+      "parameter_name": "Total thyroxine",
+      "full_name": "Total serum thyroxine",
+      "aliases": ["Total T4", "T4"],
+      "unit": "ug/dL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "5.0-12.0", "range_type": "reference_interval", "qualifications": "Binding-protein changes, pregnancy, medications, and assay affect total hormone levels."}
+      ],
+      "description": "Measures protein-bound and unbound thyroxine in blood."
+    },
+    {
+      "id": "total_t3",
+      "parameter_name": "Total triiodothyronine",
+      "full_name": "Total serum triiodothyronine",
+      "aliases": ["Total T3", "T3"],
+      "unit": "ng/dL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "80-200", "range_type": "reference_interval", "qualifications": "Binding-protein changes, pregnancy, medications, and assay affect total hormone levels."}
+      ],
+      "description": "Measures protein-bound and unbound triiodothyronine in blood."
+    },
+    {
+      "id": "tpo_antibody",
+      "parameter_name": "Thyroid peroxidase antibody",
+      "full_name": "Antibody to thyroid peroxidase",
+      "aliases": ["TPOAb", "Anti-TPO", "TPO antibody"],
+      "unit": "IU/mL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "<9", "range_type": "assay_specific", "qualifications": "Cutoff is assay-specific and is not interchangeable across laboratories."}
+      ],
+      "description": "Measures antibodies directed against thyroid peroxidase, an enzyme involved in thyroid hormone synthesis."
+    },
+    {
+      "id": "thyroglobulin_antibody",
+      "parameter_name": "Thyroglobulin antibody",
+      "full_name": "Antibody to thyroglobulin",
+      "aliases": ["TgAb", "Anti-Tg", "Anti-thyroglobulin"],
+      "unit": "IU/mL",
+      "category_id": "thyroid",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "assay_specific", "qualifications": "No common cross-assay cutoff; use the reporting laboratory's reference interval."}
+      ],
+      "description": "Measures antibodies directed against thyroglobulin, a protein made by thyroid cells."
+    },
+    {
+      "id": "fasting_glucose",
+      "parameter_name": "Fasting plasma glucose",
+      "full_name": "Fasting blood glucose concentration",
+      "aliases": ["FPG", "FBS", "Fasting blood sugar", "Fasting glucose"],
+      "unit": "mg/dL",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant, fasting", "range": "70-99", "range_type": "clinical_decision_threshold", "qualifications": "Commonly used reference/decision interval; diagnostic thresholds require appropriate clinical confirmation and are not encoded as diagnoses here."}
+      ],
+      "description": "Measures blood glucose after a defined fasting period."
+    },
+    {
+      "id": "random_glucose",
+      "parameter_name": "Random plasma glucose",
+      "full_name": "Blood glucose measured without a fasting requirement",
+      "aliases": ["Random blood sugar", "RBS", "Random glucose"],
+      "unit": "mg/dL",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "All ages", "range": null, "range_type": "no_single_reference_interval", "qualifications": "A single generic range is not appropriate because timing and recent food intake affect the result; use the laboratory's report and test context."}
+      ],
+      "description": "Measures blood glucose at the time of collection without requiring fasting."
+    },
+    {
+      "id": "ogtt_2h_glucose",
+      "parameter_name": "Two-hour oral glucose tolerance glucose",
+      "full_name": "Plasma glucose measured two hours after an oral glucose load",
+      "aliases": ["2-hour OGTT", "2h OGTT glucose", "Post-load glucose"],
+      "unit": "mg/dL",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults, non-pregnant", "range": "<140", "range_type": "clinical_decision_threshold", "qualifications": "Protocol- and population-specific threshold; pregnancy protocols use different criteria."}
+      ],
+      "description": "Measures glucose two hours after a standardized oral glucose load."
+    },
+    {
+      "id": "hba1c",
+      "parameter_name": "Haemoglobin A1c",
+      "full_name": "Glycated haemoglobin",
+      "aliases": ["HbA1c", "A1C", "Glycohemoglobin", "Glycated hemoglobin"],
+      "unit": "%",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults without known diabetes", "range": "<5.7", "range_type": "clinical_decision_threshold", "qualifications": "Commonly used decision threshold; red-cell lifespan, pregnancy, haemoglobin variants, and assay can affect results."}
+      ],
+      "description": "Estimates average glucose exposure over the preceding several months by measuring glycated haemoglobin."
+    },
+    {
+      "id": "fructosamine",
+      "parameter_name": "Fructosamine",
+      "full_name": "Serum glycated protein concentration",
+      "aliases": ["Glycated serum protein"],
+      "unit": "umol/L",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "205-285", "range_type": "reference_interval", "qualifications": "Assay-specific; protein concentration and turnover affect results."}
+      ],
+      "description": "Measures glycated circulating proteins and reflects a shorter period of glucose exposure than HbA1c."
+    },
+    {
+      "id": "insulin_fasting",
+      "parameter_name": "Fasting insulin",
+      "full_name": "Serum insulin concentration after fasting",
+      "aliases": ["Insulin", "Fasting serum insulin"],
+      "unit": "uIU/mL",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults, fasting", "range": "2-25", "range_type": "assay_specific", "qualifications": "Highly method- and population-dependent; fasting status and laboratory interval are essential."}
+      ],
+      "description": "Measures circulating insulin, a hormone involved in glucose regulation."
+    },
+    {
+      "id": "c_peptide",
+      "parameter_name": "C-peptide",
+      "full_name": "Connecting peptide released with endogenous insulin",
+      "aliases": ["C peptide", "C-peptide serum"],
+      "unit": "ng/mL",
+      "category_id": "diabetes",
+      "typical_reference_ranges": [
+        {"population": "Adults, fasting", "range": "0.5-2.0", "range_type": "assay_specific", "qualifications": "Collection conditions, kidney function, and assay affect the interval; use the laboratory's stated range."}
+      ],
+      "description": "Measures a peptide released when the body produces insulin."
+    },
+    {
+      "id": "serum_iron",
+      "parameter_name": "Serum iron",
+      "full_name": "Iron concentration in serum",
+      "aliases": ["Fe", "Serum Fe", "Iron"],
+      "unit": "ug/dL",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "65-175", "range_type": "reference_interval", "qualifications": "Time of day, recent intake, sex, and laboratory method affect results."},
+        {"population": "Adult females", "range": "50-170", "range_type": "reference_interval", "qualifications": "Time of day, menstrual status, pregnancy, and laboratory method affect results."}
+      ],
+      "description": "Measures iron circulating in blood, much of it bound to transferrin."
+    },
+    {
+      "id": "ferritin",
+      "parameter_name": "Ferritin",
+      "full_name": "Serum ferritin concentration",
+      "aliases": ["Serum ferritin", "Ferritin level"],
+      "unit": "ng/mL",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adult males", "range": "24-336", "range_type": "reference_interval", "qualifications": "Age, inflammation, liver status, pregnancy, assay, and laboratory affect the interval."},
+        {"population": "Adult females", "range": "11-307", "range_type": "reference_interval", "qualifications": "Age, menstrual status, pregnancy, inflammation, assay, and laboratory affect the interval."}
+      ],
+      "description": "Measures ferritin, a protein that stores iron; serum concentration is used as an indicator of iron stores."
+    },
+    {
+      "id": "tibc",
+      "parameter_name": "Total iron-binding capacity",
+      "full_name": "Total iron-binding capacity of serum",
+      "aliases": ["TIBC", "Iron-binding capacity"],
+      "unit": "ug/dL",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "250-450", "range_type": "reference_interval", "qualifications": "Method- and laboratory-specific; pregnancy can affect values."}
+      ],
+      "description": "Estimates the total capacity of blood proteins, mainly transferrin, to bind iron."
+    },
+    {
+      "id": "uibc",
+      "parameter_name": "Unsaturated iron-binding capacity",
+      "full_name": "Unsaturated iron-binding capacity",
+      "aliases": ["UIBC", "Unsaturated IBC"],
+      "unit": "ug/dL",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "110-370", "range_type": "reference_interval", "qualifications": "Method- and laboratory-specific."}
+      ],
+      "description": "Estimates the unoccupied iron-binding capacity of serum proteins."
+    },
+    {
+      "id": "transferrin",
+      "parameter_name": "Transferrin",
+      "full_name": "Serum transferrin concentration",
+      "aliases": ["Serum transferrin"],
+      "unit": "mg/dL",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "200-360", "range_type": "reference_interval", "qualifications": "Assay, pregnancy, inflammation, and laboratory affect the interval."}
+      ],
+      "description": "Measures the main blood protein that transports iron."
+    },
+    {
+      "id": "transferrin_saturation",
+      "parameter_name": "Transferrin saturation",
+      "full_name": "Percentage of transferrin iron-binding sites occupied",
+      "aliases": ["TSAT", "Transferrin saturation percentage", "Iron saturation"],
+      "unit": "%",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "20-50", "range_type": "reference_interval", "qualifications": "Often calculated from serum iron and TIBC; thresholds vary by context and laboratory."}
+      ],
+      "description": "Expresses circulating iron relative to the blood's iron-binding capacity."
+    },
+    {
+      "id": "soluble_transferrin_receptor",
+      "parameter_name": "Soluble transferrin receptor",
+      "full_name": "Soluble transferrin receptor concentration",
+      "aliases": ["sTfR", "Soluble TfR"],
+      "unit": "mg/L",
+      "category_id": "iron",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "assay_specific", "qualifications": "No broadly interchangeable interval; assays use different units and calibration. Use only the laboratory's range."}
+      ],
+      "description": "Measures a circulating form of the transferrin receptor involved in cellular iron uptake."
+    },
+    {
+      "id": "25oh_vitamin_d",
+      "parameter_name": "25-hydroxyvitamin D",
+      "full_name": "25-hydroxyvitamin D, the principal circulating vitamin D status marker",
+      "aliases": ["25(OH)D", "25-OH vitamin D", "Vitamin D total", "Calcidiol"],
+      "unit": "ng/mL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Most adults", "range": ">=20", "range_type": "nutrient_adequacy_reference", "qualifications": "This is a general adequacy reference for most people, not a universal target or diagnostic cutoff; professional recommendations and laboratory methods vary."}
+      ],
+      "description": "Measures the main circulating form used to assess vitamin D status."
+    },
+    {
+      "id": "vitamin_b12",
+      "parameter_name": "Vitamin B12",
+      "full_name": "Serum cobalamin concentration",
+      "aliases": ["B12", "Cobalamin", "Vitamin B-12"],
+      "unit": "pg/mL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "200-900", "range_type": "reference_interval", "qualifications": "Assay-specific; borderline results may require additional clinician-directed tests."}
+      ],
+      "description": "Measures circulating cobalamin, a vitamin needed for red blood cell formation and nervous system function."
+    },
+    {
+      "id": "serum_folate",
+      "parameter_name": "Serum folate",
+      "full_name": "Serum folic acid / folate concentration",
+      "aliases": ["Folate", "Folic acid", "Vitamin B9"],
+      "unit": "ng/mL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": ">3.0", "range_type": "reference_interval", "qualifications": "Recent food and supplements can affect serum folate; assay-specific laboratory intervals apply."}
+      ],
+      "description": "Measures circulating folate, a B vitamin involved in DNA synthesis and red blood cell production."
+    },
+    {
+      "id": "rbc_folate",
+      "parameter_name": "Red blood cell folate",
+      "full_name": "Folate concentration in red blood cells",
+      "aliases": ["RBC folate", "Erythrocyte folate"],
+      "unit": "ng/mL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "140-628", "range_type": "assay_specific", "qualifications": "Method-dependent; use the reporting laboratory's interval."}
+      ],
+      "description": "Measures folate within red blood cells, reflecting a longer-term folate pool than serum folate."
+    },
+    {
+      "id": "vitamin_b6",
+      "parameter_name": "Vitamin B6",
+      "full_name": "Pyridoxal 5'-phosphate concentration",
+      "aliases": ["B6", "PLP", "Pyridoxal phosphate"],
+      "unit": "ug/L",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "5-50", "range_type": "assay_specific", "qualifications": "The measured analyte and assay vary; confirm the laboratory's specified method and interval."}
+      ],
+      "description": "Usually measures pyridoxal 5'-phosphate, the main active circulating form of vitamin B6."
+    },
+    {
+      "id": "vitamin_b1",
+      "parameter_name": "Vitamin B1",
+      "full_name": "Whole-blood thiamine concentration",
+      "aliases": ["B1", "Thiamine", "Thiamin"],
+      "unit": "nmol/L",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "70-180", "range_type": "assay_specific", "qualifications": "Specimen type and assay method affect the interval; use the laboratory's own range."}
+      ],
+      "description": "Measures thiamine, a vitamin involved in carbohydrate metabolism and nerve function."
+    },
+    {
+      "id": "vitamin_a",
+      "parameter_name": "Vitamin A",
+      "full_name": "Serum retinol concentration",
+      "aliases": ["Retinol", "Vitamin A (retinol)"],
+      "unit": "ug/dL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "20-60", "range_type": "reference_interval", "qualifications": "Age, nutrition, inflammation, and assay can affect results; use the reporting laboratory's interval."}
+      ],
+      "description": "Measures circulating retinol, a form of vitamin A."
+    },
+    {
+      "id": "vitamin_e",
+      "parameter_name": "Vitamin E",
+      "full_name": "Serum alpha-tocopherol concentration",
+      "aliases": ["Alpha-tocopherol", "Vitamin E (alpha-tocopherol)"],
+      "unit": "mg/L",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": "5.5-17", "range_type": "reference_interval", "qualifications": "Lipid concentration and assay affect interpretation; laboratory-specific intervals apply."}
+      ],
+      "description": "Measures alpha-tocopherol, the principal circulating form of vitamin E."
+    },
+    {
+      "id": "vitamin_c",
+      "parameter_name": "Vitamin C",
+      "full_name": "Plasma ascorbic acid concentration",
+      "aliases": ["Ascorbic acid", "Vitamin C (ascorbate)"],
+      "unit": "mg/dL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "assay_specific", "qualifications": "Specimen handling and assay strongly affect results; use the laboratory's own interval."}
+      ],
+      "description": "Measures circulating ascorbic acid, the principal blood form of vitamin C."
+    },
+    {
+      "id": "vitamin_k1",
+      "parameter_name": "Vitamin K1",
+      "full_name": "Serum phylloquinone concentration",
+      "aliases": ["Phylloquinone", "Vitamin K", "Vitamin K1"],
+      "unit": "ng/mL",
+      "category_id": "vitamin",
+      "typical_reference_ranges": [
+        {"population": "Adults", "range": null, "range_type": "assay_specific", "qualifications": "Lipid concentration, medication use, specimen handling, and assay affect interpretation; use the laboratory's own interval."}
+      ],
+      "description": "Measures phylloquinone, a form of vitamin K found in blood."
+    }
+  ],
+  "sources": [
+    {
+      "id": "medlineplus_lab_ranges",
+      "title": "How to Understand Your Lab Results",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/",
+      "used_for": "Reference ranges vary between populations and laboratories; an out-of-range value is not by itself a diagnosis."
+    },
+    {
+      "id": "medlineplus_cbc",
+      "title": "Complete Blood Count (CBC)",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/",
+      "used_for": "CBC component names and descriptions."
+    },
+    {
+      "id": "medlineplus_cmp",
+      "title": "Comprehensive Metabolic Panel (CMP)",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/comprehensive-metabolic-panel-cmp/",
+      "used_for": "Common liver, kidney, electrolyte, glucose, and protein analytes and descriptions."
+    },
+    {
+      "id": "medlineplus_lipids",
+      "title": "Cholesterol Levels",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/",
+      "used_for": "Lipid panel analytes and distinction between LDL, HDL, total cholesterol, and triglycerides."
+    },
+    {
+      "id": "medlineplus_diabetes",
+      "title": "Diabetes Tests",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/diabetes-tests/",
+      "used_for": "Common glucose and HbA1c test types and context."
+    },
+    {
+      "id": "medlineplus_iron",
+      "title": "Iron Tests",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/iron-tests/",
+      "used_for": "Serum iron, transferrin, TIBC, and ferritin definitions and variation factors."
+    },
+    {
+      "id": "medlineplus_ferritin",
+      "title": "Ferritin Blood Test",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/ferritin-blood-test/",
+      "used_for": "Ferritin definition and role as an iron-storage marker."
+    },
+    {
+      "id": "medlineplus_vitamin_d",
+      "title": "Vitamin D Test",
+      "organization": "U.S. National Library of Medicine, MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/vitamin-d-test/",
+      "used_for": "25-hydroxyvitamin D as the common vitamin D status test and distinction from active vitamin D."
+    },
+    {
+      "id": "merck_cbc_ranges",
+      "title": "Normal Laboratory Values: Complete Blood Count",
+      "organization": "MSD Manual Professional Edition",
+      "url": "https://www.merckmanuals.com/professional/multimedia/table/normal-laboratory-values-complete-blood-count",
+      "used_for": "Further reading on common CBC intervals; local laboratory intervals remain authoritative."
+    },
+    {
+      "id": "merck_blood_chemistry_ranges",
+      "title": "Normal Laboratory Values: Blood Chemistry",
+      "organization": "MSD Manual Professional Edition",
+      "url": "https://www.merckmanuals.com/professional/multimedia/table/normal-laboratory-values-blood-chemistry",
+      "used_for": "Further reading on common chemistry intervals; local laboratory intervals remain authoritative."
+    },
+    {
+      "id": "merck_endocrine_ranges",
+      "title": "Normal Laboratory Values: Endocrine Tests",
+      "organization": "MSD Manual Professional Edition",
+      "url": "https://www.merckmanuals.com/professional/multimedia/table/normal-laboratory-values-endocrine-tests",
+      "used_for": "Further reading on common endocrine intervals; local laboratory intervals remain authoritative."
+    },
+    {
+      "id": "ada_diagnosis",
+      "title": "Diabetes Diagnosis",
+      "organization": "American Diabetes Association",
+      "url": "https://diabetes.org/about-diabetes/diagnosis",
+      "used_for": "Common glucose and HbA1c decision thresholds; thresholds are not presented as diagnoses in this dataset."
+    },
+    {
+      "id": "nih_ods_vitamin_d",
+      "title": "Vitamin D: Fact Sheet for Health Professionals",
+      "organization": "U.S. National Institutes of Health, Office of Dietary Supplements",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "used_for": "General vitamin D adequacy references and caveats around population-level thresholds."
+    },
+    {
+      "id": "american_thyroid_association_tests",
+      "title": "Thyroid Function Tests",
+      "organization": "American Thyroid Association",
+      "url": "https://www.thyroid.org/thyroid-function-tests/",
+      "used_for": "Descriptions of TSH, T4, T3, thyroid antibodies, and factors that affect total hormone measurements."
+    }
+  ]
+}

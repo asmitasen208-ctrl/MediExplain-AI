@@ -1,0 +1,241 @@
+{
+  "dataset": {
+    "path": "data/ml_education_intents.csv",
+    "total_rows": 25,
+    "category_counts": {
+      "what_it_measures": 5,
+      "why_doctors_check_it": 5,
+      "common_associations": 5,
+      "general_wellness": 5,
+      "doctor_questions": 5
+    },
+    "authorship_status": "generated",
+    "review_status": "unreviewed",
+    "review_date": "",
+    "reviewer_role": "none",
+    "source_notes": "generated synthetic educational examples; no external source claim"
+  },
+  "split": {
+    "outer": {
+      "splitter": "StratifiedGroupKFold",
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42,
+      "held_out_fold": 1,
+      "training_group_ids": [
+        "balanced_meals",
+        "general_health_habits",
+        "glucose_family",
+        "haemoglobin_family",
+        "hba1c_family",
+        "hydration_routine",
+        "movement_routine",
+        "wbc_family"
+      ],
+      "held_out_group_ids": [
+        "platelets_family",
+        "sleep_activity"
+      ]
+    },
+    "inner": {
+      "splitter": "StratifiedGroupKFold",
+      "n_splits": 4,
+      "shuffle": true,
+      "random_state": 42
+    }
+  },
+  "partition_counts": {
+    "development_rows": 20,
+    "development_category_counts": {
+      "what_it_measures": 4,
+      "why_doctors_check_it": 4,
+      "common_associations": 4,
+      "general_wellness": 4,
+      "doctor_questions": 4
+    },
+    "held_out_rows": 5,
+    "held_out_category_counts": {
+      "what_it_measures": 1,
+      "why_doctors_check_it": 1,
+      "common_associations": 1,
+      "general_wellness": 1,
+      "doctor_questions": 1
+    }
+  },
+  "inner_model_selection": {
+    "configuration": {
+      "tfidf": {
+        "lowercase": true,
+        "strip_accents": "unicode",
+        "ngram_range": [
+          1,
+          2
+        ],
+        "sublinear_tf": true,
+        "min_df": 1,
+        "max_df": 1.0
+      },
+      "logistic_regression": {
+        "max_iter": 1000,
+        "random_state": 42,
+        "class_weight": "balanced",
+        "multi_class": "not_explicitly_set"
+      }
+    },
+    "fold_metrics": [
+      {
+        "fold": 1,
+        "accuracy": 0.8,
+        "macro": {
+          "precision": 0.7,
+          "recall": 0.8,
+          "f1": 0.7333333333333333
+        },
+        "weighted": {
+          "precision": 0.7,
+          "recall": 0.8,
+          "f1": 0.7333333333333333
+        }
+      },
+      {
+        "fold": 2,
+        "accuracy": 1.0,
+        "macro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weighted": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      {
+        "fold": 3,
+        "accuracy": 0.8,
+        "macro": {
+          "precision": 0.7,
+          "recall": 0.8,
+          "f1": 0.7333333333333333
+        },
+        "weighted": {
+          "precision": 0.7,
+          "recall": 0.8,
+          "f1": 0.7333333333333333
+        }
+      },
+      {
+        "fold": 4,
+        "accuracy": 1.0,
+        "macro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weighted": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    ],
+    "mean_accuracy": 0.9
+  },
+  "held_out_evaluation": {
+    "label": "Exploratory evaluation from a tiny generated, unreviewed dataset",
+    "accuracy": 1.0,
+    "macro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "weighted": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "per_class": {
+      "what_it_measures": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "why_doctors_check_it": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "common_associations": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "general_wellness": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "doctor_questions": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      }
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "what_it_measures",
+      "why_doctors_check_it",
+      "common_associations",
+      "general_wellness",
+      "doctor_questions"
+    ]
+  },
+  "package_versions": {
+    "python": "3.12.10",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "evaluation_date": "2026-11-21"
+}
