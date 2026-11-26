@@ -1,0 +1,37 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and editor files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Private medical reports and uploaded files
+reports/
+private_reports/
+medical_reports/
+uploads/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.csv
